@@ -1,65 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>U Unique</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #f9f9f9;
-      color: #333;
-      text-align: center;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #111827, #1f2937);
+      color: #fff;
     }
     header {
-      background: #222;
-      color: white;
-      padding: 2rem 1rem;
+      text-align: center;
+      padding: 4rem 2rem;
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(8px);
     }
-    h1 {
-      margin: 0;
-      font-size: 2.5rem;
+    header h1 {
+      font-size: 3rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
     }
-    p {
-      margin-top: 0.5rem;
+    header p {
+      font-size: 1.2rem;
+      color: #9ca3af;
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
     }
     .product {
-      margin: 3rem auto;
-      max-width: 600px;
-      background: white;
+      background: #1e293b;
       border-radius: 12px;
-      padding: 1rem;
-      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    .product:hover {
+      transform: translateY(-10px);
     }
     .product img {
       width: 100%;
-      border-radius: 10px;
+      height: 200px;
+      object-fit: cover;
     }
-    .product h2 {
-      margin: 1rem 0 0.5rem;
+    .product-content {
+      padding: 1rem;
     }
-    .note {
-      font-style: italic;
+    .product-content h3 {
+      margin-bottom: 0.5rem;
+    }
+    .product-content p {
+      color: #9ca3af;
+      font-size: 0.9rem;
+    }
+    .about, .contact {
+      background: #0f172a;
+      border-radius: 12px;
+      padding: 2rem;
       margin-top: 2rem;
-      color: #777;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #6b7280;
+    }
+    a.button {
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      background: #3b82f6;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      margin-top: 1rem;
+    }
+    a.button:hover {
+      background: #2563eb;
     }
   </style>
 </head>
 <body>
-
   <header>
     <h1>U Unique</h1>
-    <p>Creative ideas. Rare products. Nothing ordinary.</p>
+    <p>Creative. Rare. Inspiring. Not for sale... yet.</p>
   </header>
 
-  <div class="product">
-    <img src="https://images.unsplash.com/photo-1616627562259-6f13cd0dc4d1?auto=format&fit=crop&w=800&q=80" alt="Unique Product">
-    <h2>Gravity-Defying Mug</h2>
-    <p>A mug that floats mid-air with magnetic suspension. No tricks, just innovation.</p>
-  </div>
+  <section>
+    <h2>Featured Products</h2>
+    <div class="products">
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1581291519195-ef11498d1cf5" alt="Floating Mug">
+        <div class="product-content">
+          <h3>Gravity-Defying Mug</h3>
+          <p>A mug that floats using magnetic force — stylish and futuristic.</p>
+        </div>
+      </div>
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1616627562259-6f13cd0dc4d1" alt="Futuristic Lamp">
+        <div class="product-content">
+          <h3>Light Echo Lamp</h3>
+          <p>A lamp that changes shape with sound — light reimagined.</p>
+        </div>
+      </div>
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1606813903364-0b343edb6e9f" alt="Glass Keyboard">
+        <div class="product-content">
+          <h3>Transparent Glass Keyboard</h3>
+          <p>Minimal, touch-sensitive, and pure glass — type like never before.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <p class="note">Not for sale (yet). Just here to inspire.</p>
+  <section class="about">
+    <h2>About U Unique</h2>
+    <p>
+      U Unique is a digital showcase for imaginative, futuristic products you won’t find anywhere else. We’re here to inspire creators, not consumers — for now.
+    </p>
+  </section>
 
+  <section class="contact">
+    <h2>Get in Touch</h2>
+    <p>If you're a designer or dreamer and want to collaborate or showcase your own unique creations — hit us up.</p>
+    <a href="#" class="button">Contact Us</a>
+  </section>
+
+  <footer>
+    © 2025 U Unique — Designed to Stand Out.
+  </footer>
 </body>
 </html>
